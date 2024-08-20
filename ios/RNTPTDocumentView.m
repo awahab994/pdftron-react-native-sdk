@@ -2084,7 +2084,7 @@ NS_ASSUME_NONNULL_END
 
 - (BOOL)savedSignaturesControllerShouldHideCreateNewSignatureButton:(nonnull PTSavedSignaturesViewController *)savedSignaturesController
 {
-    return self.hideCreateNewSignatureButton;
+    return YES;
 }
 
 
@@ -6509,9 +6509,6 @@ NS_ASSUME_NONNULL_END
 
 #pragma mark - RNTPTDigitalSignatureTool
 
-
-@interface RNTPTDigitalSignatureTool : PTDigitalSignatureTool
-@end
 
 @implementation RNTPTDigitalSignatureTool
 
