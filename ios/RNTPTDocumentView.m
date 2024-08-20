@@ -54,7 +54,6 @@ NS_ASSUME_NONNULL_END
 
 @interface RNTPTCollaborationService : NSObject<PTCollaborationServerCommunication>
 
-@interface RNTPTDigitalSignatureTool : PTDigitalSignatureTool
 
 @property (nonatomic, weak, nullable) RNTPTDocumentView* viewProxy;
 
@@ -6509,6 +6508,8 @@ NS_ASSUME_NONNULL_END
 @end
 
 #pragma mark - RNTPTDigitalSignatureTool
+
+
 
 @implementation RNTPTDigitalSignatureTool
 
