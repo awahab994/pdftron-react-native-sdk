@@ -2083,25 +2083,11 @@ NS_ASSUME_NONNULL_END
 
 - (BOOL)savedSignaturesControllerShouldHideCreateNewSignatureButton:(nonnull PTSavedSignaturesViewController *)savedSignaturesController
 {
-    return true;
+    return self.hideCreateNewSignatureButton;
 }
 
 
 - (void)setSignatureArrayUrl:(NSArray<NSString *> *)signatureArrayUrl {  
-
-    UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
-  
-    // Create and configure the signature view controller
-    PTSavedSignaturesViewController *savedSignaturesVC = [[PTSavedSignaturesViewController alloc] init];
-  
-    // Customize the view controller to hide the "Edit" button
-    [self hideEditButtonInView:savedSignaturesVC.view];
-  
-    // Present the view controller in a navigation controller
-    // UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:savedSignaturesVC];
-    // [rootViewController presentViewController:navController animated:YES completion:nil];
-
-
 
     PTSignaturesManager *signaturesManager = [[PTSignaturesManager alloc] init];  
     NSInteger numberOfSignatures = [signaturesManager numberOfSavedSignatures];  
@@ -6547,6 +6533,10 @@ NS_ASSUME_NONNULL_END
             [viewController.delegate rnt_documentViewControllerSavedSignaturesChanged:viewController];
         }
     }
+}
+
+- (BOOL)shouldCreateNewSignature {
+    return NO; // Prevent the creation of new signatures
 }
 
 @end
