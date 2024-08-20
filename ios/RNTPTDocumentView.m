@@ -2084,6 +2084,7 @@ NS_ASSUME_NONNULL_END
 
 - (BOOL)savedSignaturesControllerShouldHideCreateNewSignatureButton:(nonnull PTSavedSignaturesViewController *)savedSignaturesController
 {
+    NSLog(@"123 shouldCreateNewSignature called");  
     return YES;
 }
 
