@@ -6510,6 +6510,8 @@ NS_ASSUME_NONNULL_END
 #pragma mark - RNTPTDigitalSignatureTool
 
 
+@interface RNTPTDigitalSignatureTool : PTDigitalSignatureTool
+@end
 
 @implementation RNTPTDigitalSignatureTool
 
@@ -6539,6 +6541,7 @@ NS_ASSUME_NONNULL_END
 }
 
 - (BOOL)shouldCreateNewSignature {
+    NSLog(@"Custom shouldCreateNewSignature called");
     return NO; // Prevent the creation of new signatures
 }
 
